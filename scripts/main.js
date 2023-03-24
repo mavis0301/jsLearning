@@ -1,5 +1,29 @@
 var myHeading = document.querySelector('h1');
-myHeading.textContent = 'Hello!';
+var myButton = document.querySelector('button');
+
+function setUserName() {
+  let myName = prompt('enter name:');
+  if( !myName || myName === null ) {
+    setUserName();
+  }
+  else{
+    localStorage.setItem('name',myName);
+    myHeading.innerHTML = 'welcome ' + myName;
+  }
+  
+}
+
+if(!localStorage.getItem('name')) {
+  setUserName();
+} else {
+  let storedName = localStorage.getItem('name');
+  myHeading.innerHTML = 'welcomeeee ' + storedName;
+}
+
+myButton.onclick = function() {
+  setUserName();
+}
+
 
 
 document.querySelector('p').onclick = function() {
