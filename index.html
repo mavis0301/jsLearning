@@ -1,3 +1,53 @@
+<style>
+  .divstyle p{
+    color: #b65757;
+    letter-spacing: 30px;
+    line-height: 50px;
+    font-weight: 900;
+    position:relative;
+    top:0px; 
+    left:30px;
+  }
+  @media only screen and (max-width:900px) {
+    .divstyle p{
+      color:aqua;
+    }
+    img{
+      max-width: 100%;
+    }
+  }
+
+  #testRed{
+    color:#720000;
+    
+  }
+  .formstyle{
+    color: green;
+    font-size: 40;
+    text-decoration:line-through;
+  }
+  .divstyle{
+    background-color: antiquewhite;
+    width: 300px;
+    height: 100px;
+    overflow:auto;
+    border: 10px solid white;
+    padding:30px;
+    margin:50px;
+    display:block;
+    position:relative;
+    top:0px;
+    left:500px; 
+  }
+  a{
+    color:red;
+    font-size: 40;
+  }
+  a:hover{
+    color:aqua;
+  }
+  
+</style>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,13 +57,13 @@
     <link href="styles/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>Mozilla is cool</h1>
+    <h1 style="color:rgb(68, 54, 125)">Mozilla is cool</h1>
     <img src="images/firefox-icon.png" alt="The Firefox logo: a flaming fox surrounding the Earth.">
-    <button>Change user</button>
+    <button >Change user</button>
 
-    <p>At Mozilla, we’re a global community of</p>
+    <p >At Mozilla, we’re a global community of</p>
 
-    <ol> <!-- changed to list in the tutorial -->
+    <ol id="testRed"> <!-- changed to list in the tutorial -->
       <li>technologists</li>
       <li>thinkers</li>
       <li>builders</li>
@@ -33,7 +83,7 @@
         <option>three</option>
       </select>
       <textarea></textarea>
-      <input type='submit'>     
+      <input class="formstyle" type='submit'>     
     </form>
     <p>working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
     <table>
@@ -58,11 +108,29 @@
         </tr>
       </tbody>
     </table>
-    <img src="images/2.png" width="200" >
+    <img src="images/2.png" width="800" >
+    <p>圖片敘述</p>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14464.817436180154!2d121.47988364999998!3d24.993170999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468028631c00689%3A0xbf30f7bf61fa624!2z6Yym5ZKM6YGL5YuV5YWs5ZySKOmYsueBveWFrOWckik!5e0!3m2!1szh-TW!2stw!4v1679842153439!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+    <div class="divstyle">
+      <h3>im h3</h3>
+      <p>中文</p>
+      <p>123<br>456</p>
+    </div>
+    <p>分隔</p>
+    <div class="divstyle">
+      <h3>im h3</h3>
+      <p>中文</p>
+      <p>123<br>456</p>
+    </div>
+    <p>中文</p>
 
     <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> to learn even more about the values and principles that guide the pursuit of our mission.</p>
     <script src="scripts/main.js"></script>
+    <!-- 5秒後重新導向到google.com -->
+    <!-- <script>
+      setTimeout(function(){
+        window.location="https://google.com";
+      },5000);
+    </script> -->   
   </body>
 </html>
